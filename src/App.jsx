@@ -16,8 +16,6 @@ function App() {
     },
   });
 
-  console.log('this credentials in app', credentials);
-
   return (
     <div className="App">
       <BrowserRouter>

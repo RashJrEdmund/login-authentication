@@ -5,7 +5,7 @@ import React from 'react';
 export default function Login({ credentials }) {
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <h1>Login to your account</h1>
         <input
           type="email"

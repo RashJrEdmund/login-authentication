@@ -45,6 +45,9 @@ export default function Register({ setCredentials }) {
         type="password"
         name="create_password"
         placeholder="Create password"
+        style={{
+          border: password.pass === password.confirm && '1px solid blue',
+        }}
         onChange={(e) =>
           setPassword(() => ({ ...password, pass: e.target.value }))
         }
@@ -55,10 +58,7 @@ export default function Register({ setCredentials }) {
         name="confirm_password"
         placeholder="confirm password"
         style={{
-          border:
-            password.pass === password.confirm
-              ? '1px solid blue'
-              : '1px solid red',
+          border: password.pass === password.confirm && '1px solid blue',
         }}
         required
         onChange={(e) => {
